@@ -13,13 +13,4 @@ data class BaseResponse(
     val totalPages: Int,
     @SerializedName("total_results")
     val totalResults: Int,
-//    @SerializedName("dates")
-//    val dates: Dates
 )
-
-//data class Dates(
-//    @SerializedName("maximum")
-//    val maximum: String,
-//    @SerializedName("minimum")
-//    val minimum: String
-//)
