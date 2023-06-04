@@ -7,11 +7,6 @@
     <string name="title_movie">Movie Title</string>
     <string name="original_title">Original Title</string>
     <string name="title_activity_detail_movie">DetailMovieActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
@@ -26,4 +21,6 @@
     <string name="review">Reviews</string>
     <string name="author_review">Author : %s</string>
     <string name="content_review">Content</string>
+    <string name="favorite_list">Favorite</string>
+    <string name="detail">Detail</string>
 </resources>
