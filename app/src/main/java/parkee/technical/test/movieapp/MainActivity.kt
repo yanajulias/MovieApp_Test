@@ -3,6 +3,8 @@ package parkee.technical.test.movieapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,7 +15,7 @@ import parkee.technical.test.movieapp.data.response.MovieItem
 import parkee.technical.test.movieapp.databinding.ActivityMainBinding
 import parkee.technical.test.movieapp.viewmodel.MainViewModel
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
     private val mainViewModel by viewModels<MainViewModel>()
@@ -25,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    private val adapterTopRated by lazy{
+    private val adapterTopRated by lazy {
         ListTopRatedAdapter {
             Intent(this, DetailMovieActivity::class.java).apply {
                 putExtra("movie_id", it.id)
@@ -33,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    private val adapterNowPlaying by lazy{
+    private val adapterNowPlaying by lazy {
         ListTopRatedAdapter {
             Intent(this, DetailMovieActivity::class.java).apply {
                 putExtra("movie_id", it.id)
@@ -53,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             getNowPlayingMovie()
         }
 
-        supportActionBar?.hide()
+//        supportActionBar?.hide()
 
         binding.apply {
             rvPopularMovie.layoutManager =
@@ -77,14 +79,31 @@ class MainActivity : AppCompatActivity() {
             setPopularMovie(it)
         }
 
-        mainViewModel.topRatedMovie.observe(this){
+        mainViewModel.topRatedMovie.observe(this) {
             setTopRatedMovie(it)
         }
 
-        mainViewModel.nowPlayingMovie.observe(this){
+        mainViewModel.nowPlayingMovie.observe(this) {
             setNowPlayingMovie(it)
         }
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.option_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.favorite -> {
+                val intent = Intent(this, FavoriteActivity::class.java)
+                startActivity(intent)
+                true
+            }
+
+            else -> true
+        }
     }
 
     private fun showLoading(isLoading: Boolean) {
@@ -111,5 +130,9 @@ class MainActivity : AppCompatActivity() {
         val adapter = adapterNowPlaying
         adapter.setData(listNowPlayingMovie)
         binding.rvNowPlaying.adapter = adapter
+    }
+
+    override fun onClick(v: View) {
+
     }
 }
