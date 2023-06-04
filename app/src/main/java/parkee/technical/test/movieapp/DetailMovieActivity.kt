@@ -26,8 +26,6 @@ class DetailMovieActivity : AppCompatActivity() {
         detailMovieBinding = ActivityDetailMovieBinding.inflate(layoutInflater)
         setContentView(detailMovieBinding.root)
 
-        supportActionBar?.hide()
-
         detailMovieBinding.apply {
             rvListResult.layoutManager = LinearLayoutManager(applicationContext)
             rvListResult.setHasFixedSize(true)
