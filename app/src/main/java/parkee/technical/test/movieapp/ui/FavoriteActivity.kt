@@ -1,4 +1,4 @@
-package parkee.technical.test.movieapp
+package parkee.technical.test.movieapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

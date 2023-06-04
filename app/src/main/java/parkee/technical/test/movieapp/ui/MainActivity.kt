@@ -1,4 +1,4 @@
-package parkee.technical.test.movieapp
+package parkee.technical.test.movieapp.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,7 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import parkee.technical.test.movieapp.R
 import parkee.technical.test.movieapp.adapter.ListPopularMovieAdapter
 import parkee.technical.test.movieapp.adapter.ListTopRatedAdapter
 import parkee.technical.test.movieapp.data.response.MovieItem
