@@ -23,6 +23,7 @@
             tools:src="@tools:sample/backgrounds/scenic" />
 
         <TextView
+            android:paddingTop="24dp"
             android:id="@+id/txtMovieDetailTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -105,5 +106,28 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/favorite_list"
+            android:src="@drawable/ic_favorite_menu"
+            app:layout_constraintBottom_toBottomOf="@id/imgDetailMovie"
+            app:layout_constraintEnd_toStartOf="@id/btnShare"
+            app:layout_constraintTop_toBottomOf="@id/imgDetailMovie" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/favorite_list"
+            android:src="@drawable/ic_share"
+            app:layout_constraintBottom_toBottomOf="@id/imgDetailMovie"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgDetailMovie" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
