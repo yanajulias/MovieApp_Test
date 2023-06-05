@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val adapter by lazy {
         ListPopularMovieAdapter {
             Intent(this, DetailMovieActivity::class.java).apply {
-                putExtra("movie_id", it.id)
+                putExtra("movie_id", it)
                 startActivity(this)
             }
         }
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val adapterTopRated by lazy {
         ListTopRatedAdapter {
             Intent(this, DetailMovieActivity::class.java).apply {
-                putExtra("movie_id", it.id)
+                putExtra("movie_id", it)
                 startActivity(this)
             }
         }
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val adapterNowPlaying by lazy {
         ListTopRatedAdapter {
             Intent(this, DetailMovieActivity::class.java).apply {
-                putExtra("movie_id", it.id)
+                putExtra("movie_id", it)
                 startActivity(this)
             }
         }
