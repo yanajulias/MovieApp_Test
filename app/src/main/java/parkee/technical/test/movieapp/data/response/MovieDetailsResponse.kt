@@ -15,5 +15,7 @@ data class MovieDetailsResponse(
     @SerializedName("status")
     val status: String,
     @SerializedName("title")
-    val title: String
+    val title: String,
+    @SerializedName("homepage")
+    val homepage: String,
 )
