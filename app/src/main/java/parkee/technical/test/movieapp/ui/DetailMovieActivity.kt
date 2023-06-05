@@ -39,7 +39,9 @@ class DetailMovieActivity : AppCompatActivity() {
         detailMovieBinding = ActivityDetailMovieBinding.inflate(layoutInflater)
         setContentView(detailMovieBinding.root)
 
-        val movieId = intent.getParcelableExtra("movie_id", MovieItem::class.java)
+        //val movieId = intent.getParcelableExtra("movie_id", MovieItem::class.java)
+        val movieId = intent.getParcelableExtra<MovieItem>("movie_id")
+
         val url = Constants.MOVIE_URL + movieId?.id
 
         detailMovieBinding.apply {
