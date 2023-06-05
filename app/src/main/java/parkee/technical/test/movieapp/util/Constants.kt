@@ -12,5 +12,6 @@ class Constants {
         const val NOW_PLAYING = "movie/now_playing?api_key=$API_KEY"
         const val MOVIE_REVIEWS = "movie/{movieId}/reviews?api_key=$API_KEY"
         const val MOVIE_DETAILS = "movie/{movieId}?api_key=$API_KEY"
+        const val MOVIE_URL = "https://www.themoviedb.org/movie/"
     }
 }
