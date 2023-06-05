@@ -23,4 +23,5 @@
     <string name="content_review">Content</string>
     <string name="favorite_list">Favorite</string>
     <string name="detail">Detail</string>
+    <string name="share">Share</string>
 </resources>
